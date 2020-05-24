@@ -1,7 +1,9 @@
 # DPI Scaler
 The `DPI Scaler` is a command line utility used to set the `Scale and Layout` DPI in Windows 10.
 
-Windows 10 will attempt to set the optimal DPI scaling setting based on the screen size and resolution of the taget device, and often sets it too aggressively. Unfortunately Microsoft does not provide a native utility (or PowerShell cmdlet) to programatically set the DPI scaler, which is why we've written this application.
+Windows 10 will attempt to set the optimal DPI scaling setting based on the screen size and resolution of the target device, and often sets it too aggressively. Unfortunately, Microsoft does not provide a native utility (or PowerShell cmdlet) to programmatically set the DPI scale, which is why we've written this CLI tool.
+
+![Windows 10 Scale and Layout Settings](img/win10-dpiscaling.png?raw=true "Windows 10 Scale and Layout Settings")
 
 ## Usage
 Run `DPIScaler.exe -Help` to get a list of available options
@@ -23,13 +25,13 @@ Example: DPIScaler.exe -SetDPIValue -DisplayAdapter=0 -DPIValue=125
 ## Examples
 To get the current adapter ID, run `DPIScaler.exe -GetAdapterID` 
 ```
-C:\Program Files (x86)\DPIScaler>DPIScaler.exe -GetAdapterID
+C:\Program Files (x86)\Endpoint Focus\DPIScaler>DPIScaler.exe -GetAdapterID
 0. (internal display)
 ```
 
 To get the current DPI scale for the device, run `DPIScaler.exe -DisplayAdapter=0 -GetDPIVale`
 ```
-C:\Program Files (x86)\DPIScaler>DPIScaler.exe -DisplayAdapter=0 -GetDPIValue
+C:\Program Files (x86)\Endpoint Focus\DPIScaler>DPIScaler.exe -DisplayAdapter=0 -GetDPIValue
 150
 ```
 **Note** The value returned is a percentage
